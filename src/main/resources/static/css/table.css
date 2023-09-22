@@ -1,0 +1,12 @@
+.table td{
+    max-width:500px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#modalContent{
+    height:100px;
+    width:100%;
+    overflow:visible;
+    word-break:break-all
+}

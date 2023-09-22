@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人考勤</title>
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="/static/css/table.css">
+    <link rel="stylesheet" href="/static/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+
+    <script src="/static/js/jquery.3.3.1.min.js"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/lib/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="/static/lib/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+    <script src="/static/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/static/lib/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="/static/js/personalAttendance.js"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">查询条件</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" id="search_form">
+                    <div class="form-group">
+                        <label for="search_id" class="col-sm-1 control-label">月份</label>
+                        <div class="col-sm-6">
+                            <input  class="form-control" id="search_id">
+                        </div>
+                        <div class="col-sm-1" id="findiv">
+                            <a href="javascript:void (0)" class="btn btn-primary findKeywords" onclick="findaway()" >
+                                <span class="glyphicon glyphicon-search"></span> 查询
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table id="table" class="table">
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

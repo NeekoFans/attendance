@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+
+    <script src="/static/js/jquery.3.3.1.min.js"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/headPage.js"></script>
+
+</head>
+<body>
+<div class="row" style="width:500px;position:relative;left: 200px">
+    <div class="col-md-12">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title" style="text-align: center">考勤</h3>
+            </div>
+            <div class="panel-body" style="height: 120px">
+                    <div class="col-md-6">
+                        <div style="display: inline-block" class="col-md-3">
+                            <button id="sign_in" onclick="sign_in()" type="button" class="btn btn-info btn-lg" style="width: 100px">签到</button>
+                        </div>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div style="display: inline-block;width: 10px"></div>
+
+                        <div style="display: inline-block" class="col-md-3">
+                            <button id="sign_out" onclick="sign_out()" type="button" class="btn btn-info btn-lg" style="width: 100px">签退</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="width:700px;position:relative;left: 105px">
+    <div class="col-md-12">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title" style="text-align: center">公司公告</h3>
+            </div>
+            <div class="panel-body" style="height: 120px">
+             <div id="noticeTitle" style="font-size: 2rem"></div>
+                <div id="noticeCreateTime"></div>
+                <br>
+                <div id="noticeContent"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

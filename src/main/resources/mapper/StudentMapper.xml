@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--根标签，所有sql语句都必须写在这里面-->
+<!--namespace 声明当前配置文件对应的接口类-->
+<mapper namespace="com.example.back2.dao.StudentDao">
+    <!--定义插入语句 id=dao方法名 parameterType=方法参数的数据类型-->
+    <!--#{对象属性名||方法参数名}  #{}会被转换成？-->
+   <insert id="save" parameterType="Student">
+       insert into student (sno,sname,ssex,sbirthday,class)
+       values (#{id},#{name},#{birth},#{sex},#{cla})
+   </insert>
+
+<!--    <delete id="delete" parameterType="String">-->
+<!--        delete from student where sno=#{id}-->
+<!--    </delete>-->
+    <delete id="delete" parameterType="String">
+        delete from student where sno in 
+        <foreach collection="id" item="i" open="(" close=")" separator=",">
+            #{i}
+        </foreach>
+    </delete>
+    
+    <update id="update">
+        update student set sbirthday=#{b} where sno=#{a}
+    </update>
+
+
+    
+<resultMap id="rm" type="Student">
+    <!--id标签设置主键列，用于去除重复的数据 必须要有，不管表是否设置主键-->
+    <!--result标签设置当前查询结果列名与对象属性名的对应关系-->
+    <!--column列表，如果有别名，就使用别名，property对象属性名-->
+    <id column="sno" property="id"></id>
+    <result column="sname" property="name"></result>
+    <result column="ssex" property="sex"></result>
+    <result column="b" property="birth"></result>
+    <result column="class" property="cla"></result>
+</resultMap>
+<!--resultMap 结果映射配置id-->
+    <select id="query" parameterType="Student" resultMap="rm">
+        select sno,sname,ssex,sbirthday as b,class from student
+    </select>
+
+<!--    <insert id="add" parameterType="User">-->
+<!--        insert into user (account,password)-->
+<!--        values (#{account},#{password})-->
+<!--    </insert>-->
+</mapper>

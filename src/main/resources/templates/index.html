@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/index.css">
+
+    <script src="/static/js/jquery.3.3.1.min.js"></script>
+
+    <script src="/static/js/index.js"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/personInfo.js"></script>
+    <script src="/static/js/index.js"></script>
+
+</head>
+<body>
+    <table>
+        <thead>
+        <div class="nup"></div>
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-12" style="background-color: #00b4ff">
+                    <div class="col-md-8">后台管理系统</div>
+                    <div class="col-md-4">
+                        欢迎<span id="ZHao"></span>
+                        <a class="btn btn-default btn-xs glyphicon glyphicon-off" style="background-color: #00b4ff"
+                           href="/User/Login" role="button">退出</a>
+                    </div>
+                    <!--<div class="col-md-2">欢迎<span id="ZHao"></span></div>-->
+                    <!--<div class="col-md-1">
+                        &lt;!&ndash;<a class="glyphicon glyphicon-off" onclick="backLogin()">退出</a>&ndash;&gt;
+                        <a class="btn btn-default btn-xs glyphicon glyphicon-off" href="/User/Login"  role="button">退出</a>
+                    </div>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="background-color: #00b4ff">
+        <tbody>
+        <tr>
+            <td class="First_td"><a class="left_info" onclick="editById()"  href="/User/personInfo" target="right"><span class="glyphicon glyphicon-user"
+                                                                                                                         aria-hidden="true"></span>个人信息</a></td>
+            <td class="First_td" colspan="9"><a id="headPage" onclick="t1()" href="/User/headPage" target="right">首页</a></td>
+
+        </tr>
+        <tr>
+            <td class="First_td"><a class="left_info" href="/User/companyPublic" target="right"><span class="glyphicon glyphicon-bullhorn"
+                                                                                                      aria-hidden="true"></span>公司公告</a></td>
+            <td colspan="9" rowspan="9" style="text-align: center">
+                <iframe id="iframe1" name="right" src="" width="900px" height="360">这是内容区域</iframe>
+            </td>
+
+        </tr>
+        <tr>
+            <td class="First_td"><a class="left_info" href="/User/personalAttendance" target="right"><span class="glyphicon glyphicon-hand-up"
+                                                                                                           aria-hidden="true"></span>我的考勤</a>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td class="First_td"></td>
+            <!--<td colspan="9"></td>-->
+
+        </tr>
+        <tr>
+            <td class="First_td"></td>
+            <!--<td colspan="9"></td>-->
+
+        </tr>
+        <tr>
+            <td class="First_td"></td>
+            <!--<td colspan="9"></td>-->
+
+        </tr>
+        <tr>
+            <td class="First_td"></td>
+            <!--<td colspan="9"></td>-->
+
+        </tr>
+        <tr>
+            <td class="First_td"></td>
+            <!--<td colspan="9"></td>-->
+
+        </tr>
+        <tr>
+            <td class="First_td"></td>
+            <!--<td colspan="9"></td>-->
+
+        </tr>
+        <tr>
+            <td class="First_td"></td>
+            <!--<td colspan="9"></td>-->
+
+        </tr>
+        </tbody>
+        </div>
+        </div>
+        </div>
+        </thead>
+
+
+    </table>
+</body>
+</html>

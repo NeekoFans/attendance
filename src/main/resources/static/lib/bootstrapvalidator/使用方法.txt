@@ -1,0 +1,40 @@
+//初始化
+//设置表单验证
+function formValidatro() {
+        $('#form').bootstrapValidator({
+            // live: 'disabled',
+            message: '这是一个无效的值',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    name: {
+                        validators: {
+                            notEmpty: {
+                                message: '菜单名不可为空'
+                            },
+                            stringLength: {
+                                min: 4,
+                                max: 8,
+                                message: '菜单名必须4到8个字符直接'
+                            }
+                        }
+                    }
+                }
+            });
+}
+
+//获取表单验证结果
+$('#form').bootstrapValidator('validate');//手动验证表单
+var flag = $('#form').data('bootstrapValidator').isValid()//验证是否通过true/false
+
+//取消表单验证
+ $('#form').bootstrapValidator('resetForm',true);//必须在模态框关闭前
+
+  //处理日期选择插件与表单验证插件的冲突
+    $("#add_sbirthday").on("changeDate",function () {
+        //当日期选择框改变时，强制验证表单对应字段
+        $('#addForm').bootstrapValidator('revalidateField','sbirthday')
+    })
